@@ -15,4 +15,9 @@ class LoadVar
             putenv(trim($line));
         }
     }
+
+    public static function teste()
+    {
+        echo "deu certo";
+    }
 }
