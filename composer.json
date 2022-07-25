@@ -1,0 +1,18 @@
+{
+    "name": "alerr/orm",
+    "description": "Um orm para estudos pessoais",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Alerr\\Orm\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "alerrandro borges",
+            "email": "alerrandrokaton@gmail.com"
+        }
+    ],
+    "require": {}
+}
