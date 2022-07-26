@@ -15,3 +15,4 @@ $dados = $select->selectTable('persistings');
 echo '<pre>';
 print_r($dados);
 echo '</pre>';
+
