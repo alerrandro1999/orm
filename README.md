@@ -20,6 +20,7 @@ LOCALHOST=local do seu banco
 DBNAME=nome do banco
 USER=usuario 
 PASSWORD=senha
+TABLE=sua tabela
 ```
 
 ## Utilizando
@@ -29,7 +30,11 @@ A classe LoadVar vai carregar as variaveis de ambiente do **.env**
 
 A class Select e a classe responsável para instacia do ORM
 
-O método **selectTable** e responsável por um **SELECT * FROM**, na tabela que e passada como parâmetro, os dados são trazidos em forma de **array** para manipulação da melhor forma que o usuario desejar.
+Ainda estamos limitados de trabalhar com uma tabela por vez, ela e passada nas variaveis de ambiente
+
+O método **selectTable** e responsável por um **SELECT * FROM**, os dados são trazidos em forma de **array** para manipulação da melhor forma que o usuario desejar.
+
+O método **selectById** e responsável por um **SELECT * FROM WHERE id = ?**, que traz dadis unicos referentes ao id, os dados são trazidos em forma de **array** para manipulação da melhor forma que o usuario desejar.
 
 ```php
 require __DIR__ . '/vendor/autoload.php';
@@ -37,19 +42,22 @@ require __DIR__ . '/vendor/autoload.php';
 use Alerr\Orm\Environment\LoadVar;
 
 use Alerr\Orm\OrmClass\Select\Select;
+use Alerr\Orm\OrmClass\SelectOnly\SelectOnlyById;
+
 
 LoadVar::load(__DIR__);
 
-$select = new Select;
+$dados = $select->selectTable();
 
-$dados = $select->selectTable('persistings');
+$unique = $unique->selectById(2);
+
 
 echo '<pre>';
 print_r($dados);
+print_r($unique);
 echo '</pre>';
 
-```
 
-Até o momento apenas o **select** está em funcionamento.
+```
 
 Estarei melhorando esse projeto conforme o tempo, acrescentando mais métodos e melhorando a lógica.
