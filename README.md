@@ -69,5 +69,3 @@ echo '</pre>';
 
 
 ```
-
-Estarei melhorando esse projeto conforme o tempo, acrescentando mais métodos e melhorando a lógica.
