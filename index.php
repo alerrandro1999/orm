@@ -3,27 +3,30 @@
 require __DIR__ . '/vendor/autoload.php';
 
 use Alerr\Orm\Environment\LoadVar;
+use Alerr\Orm\Model\Nome;
 use Alerr\Orm\OrmClass\Delete\DeleteById;
 use Alerr\Orm\OrmClass\Select\Select;
 use Alerr\Orm\OrmClass\SelectOnly\SelectOnlyById;
 
 LoadVar::load(__DIR__);
 
-$select = new Select;
+dump(Nome::all());
 
-$unique = new SelectOnlyById;
+// $select = new Select;
 
-$delete = new DeleteById;
+// $unique = new SelectOnlyById;
+
+// $delete = new DeleteById;
 
 
-$dados = $select->selectTable();
+// $dados = $select->selectTable();
 
-$unique = $unique->selectById(5);
+// $unique = $unique->selectById(5);
 
-$delete->delete(5);
+// $delete->delete(5);
 
-echo '<pre>';
-print_r($dados);
-print_r($unique);
-echo '</pre>';
+// echo '<pre>';
+// print_r($dados);
+// print_r($unique);
+// echo '</pre>';
 
