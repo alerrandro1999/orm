@@ -12,21 +12,8 @@ LoadVar::load(__DIR__);
 
 dump(Nome::all());
 
-// $select = new Select;
+$nome = Nome::all();
 
-// $unique = new SelectOnlyById;
-
-// $delete = new DeleteById;
-
-
-// $dados = $select->selectTable();
-
-// $unique = $unique->selectById(5);
-
-// $delete->delete(5);
-
-// echo '<pre>';
-// print_r($dados);
-// print_r($unique);
-// echo '</pre>';
-
+foreach ($nome as $key => $value) {
+   echo $value->nome . PHP_EOL;
+}

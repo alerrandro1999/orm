@@ -6,18 +6,24 @@ use Helios\Interface\IModel;
 
 use Helios\Database\Connection;
 
+use PDO;
+
 class Model implements IModel
 {
+    protected static $connection;
 
-    public static function all()
+    public function __construct(Connection $connection)
     {
-        $connection = new Connection();
-        $table = explode('\\', get_class(new static()));
-        $table = lcfirst($table[2]);
+        self::$connection = $connection;
+    }
 
-        $pdo = $connection->connectionDatabase()->prepare('SELECT * FROM ' . $table . '');
+    public static function all() : array
+    {
+        $table = explode('\\', get_class(new static(new Connection)));
+        $table = lcfirst($table[2]);
+        $pdo = self::$connection->connectionDatabase()->prepare('SELECT * FROM ' . $table . '');
         $pdo->execute();
-        $data = $pdo->fetchAll();
+        $data = $pdo->fetchAll(PDO::FETCH_CLASS);
         return $data;
     }
 }
