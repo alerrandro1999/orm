@@ -1,8 +1,8 @@
 <?php
 
-namespace Alerr\Orm\Model;
+namespace Helios\Model;
 
-use Alerr\Orm\Database\Entity\Model;
+use Helios\Entity\Model;
 
 class Nome extends Model
 {

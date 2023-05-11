@@ -42,10 +42,10 @@ O método **delete** e responsável por um **DELETE FROM WHERE id = ?**, que del
 ```php
 require __DIR__ . '/vendor/autoload.php';
 
-use Alerr\Orm\Environment\LoadVar;
-use Alerr\Orm\OrmClass\Delete\DeleteById;
-use Alerr\Orm\OrmClass\Select\Select;
-use Alerr\Orm\OrmClass\SelectOnly\SelectOnlyById;
+use Helios\Environment\LoadVar;
+use Helios\OrmClass\Delete\DeleteById;
+use Helios\OrmClass\Select\Select;
+use Helios\OrmClass\SelectOnly\SelectOnlyById;
 
 LoadVar::load(__DIR__);
 
