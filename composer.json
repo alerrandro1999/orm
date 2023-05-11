@@ -1,11 +1,11 @@
 {
-    "name": "alerr/orm",
-    "description": "Um orm para estudos pessoais",
+    "name": "helios/orm",
+    "description": "ORM",
     "type": "project",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Alerr\\Orm\\": "src/"
+            "Helios\\": "src/"
         }
     },
     "authors": [
@@ -14,7 +14,7 @@
             "email": "alerrandrokaton@gmail.com"
         }
     ],
-    "require": {
+    "require-dev": {
         "symfony/var-dumper": "^6.2"
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Alerr\Orm\Database;
+namespace Helios\Database;
 
 class Connection
 {

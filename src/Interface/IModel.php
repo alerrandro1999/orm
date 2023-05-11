@@ -1,6 +1,6 @@
 <?php
 
-namespace Alerr\Orm\Database\Interface;
+namespace Helios\Interface;
 
 interface IModel 
 {

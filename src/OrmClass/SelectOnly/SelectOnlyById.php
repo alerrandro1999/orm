@@ -1,8 +1,8 @@
 <?php
 
-namespace Alerr\Orm\OrmClass\SelectOnly;
+namespace Helios\OrmClass\SelectOnly;
 
-use Alerr\Orm\Database\Connection;
+use Helios\Database\Connection;
 
 class SelectOnlyById extends Connection
 {

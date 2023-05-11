@@ -1,8 +1,8 @@
 <?php
 
-namespace Alerr\Orm\OrmClass\Delete;
+namespace Helios\OrmClass\Delete;
 
-use Alerr\Orm\Database\Connection;
+use Helios\Database\Connection;
 
 class DeleteById extends Connection
 {

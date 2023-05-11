@@ -1,8 +1,8 @@
 <?php
 
-namespace Alerr\Orm\OrmClass\Select;
+namespace Helios\OrmClass\Select;
 
-use Alerr\Orm\Database\Connection;
+use Helios\Database\Connection;
 
 class Select extends Connection
 {
