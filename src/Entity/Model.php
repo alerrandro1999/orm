@@ -19,19 +19,19 @@ class Model implements IModel
         self::$connection = $connection;
     }
 
-    public static function all(): array
+    public static function all(string $args = '*'): array
     {
         $name = self::name();
-        $pdo = self::$connection->connectionDatabase()->prepare('SELECT * FROM ' . $name . '');
+        $pdo = self::$connection->connectionDatabase()->prepare('SELECT ' . $args . ' FROM ' . $name . '');
         $pdo->execute();
         $data = $pdo->fetchAll(PDO::FETCH_CLASS);
         return $data;
     }
 
-    public static function find(int $id): stdClass
+    public static function find(int $id, string $args = '*'): stdClass
     {
         $name = self::name();
-        $pdo = self::$connection->connectionDatabase()->prepare('SELECT * FROM ' . $name . ' WHERE ' . $id . ' = id');
+        $pdo = self::$connection->connectionDatabase()->prepare('SELECT ' . $args . ' FROM ' . $name . ' WHERE ' . $id . ' = id');
         $pdo->execute();
         $data = $pdo->fetchObject();
         return $data;
