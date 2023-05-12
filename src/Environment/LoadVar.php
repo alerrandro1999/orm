@@ -6,7 +6,7 @@ class LoadVar
 {
     public static function load($dir)
     {
-        if (!file_exists($dir.'/.env')) {
+        if (!file_exists($dir . '/.env')) {
             return false;
         }
 
@@ -14,10 +14,5 @@ class LoadVar
         foreach ($lines as $line) {
             putenv(trim($line));
         }
-    }
-
-    public static function teste()
-    {
-        echo "deu certo";
     }
 }
